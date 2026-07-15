@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DGP</title>
+    <link rel="stylesheet" href="base.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<script src="js.js" defer></script>
+<script src="basics.js" defer></script>
+<script src="language.js" defer></script>
+
+<body>
+    <div id="white-screen" class="absolute center">Loading<span id="dots"></span></div>
+    <!--Menu's-->
+    <div class="options" id="menu">
+        <div class="option fr" onclick="select('menu')">Play</div>
+        <div class="option fr" onclick="select('opcje')">Options</div>
+        <div class="option fr" onclick="select('credits')">Credit</div>
+        <div class="option fr" onclick="select('extras')">Extras</div>
+    </div>
+
+    <div class="options extra" id="main">
+        <div class="options alot" onmouseleave="minigameShowcase(99)">
+        <div class="option 1m mm">Pwong</div>
+        <div class="option 1m mm">Tic Tac Toe</div>
+        <div class="option 1m mm">Rock paper scissors</div>
+        <div class="option 1m mm">Memory</div>
+        </div>
+        <div class="option bb" onclick="goBack(0)">Back</div>
+    </div>
+
+    <div class="options extra" id="options">
+        <div class="option mm"><span class="2m">Language:</span>
+        <select id="lang" class="mm" onchange="language()">
+            <option class="white mm">English</option>
+            <option class="white mm">Polish (Polski)</option>
+        </select></div>
+        <div class="option bb" onclick="goBack(1)">Back</div>
+    </div>
+    <div class="options extra" id="credits">
+        <div class="alot3">
+        <div class="option 3m mm">Created by: DlikeDavid</div>
+        </div>
+        <div class="option bb" onclick="goBack(2)">Back</div>
+    </div>
+
+    <div class="options extra" id="extras">
+        <div class="option 4m" onclick="changelogShow()">Ver: 0.6.2</div>
+        <div class="option bb " onclick="goBack(3)">Back</div>
+    </div>
+    <!--Side stuff-->
+    <!--Convert the pulse or make second side screen-->
+    <div id="sideScreen" class="highAm">
+        <div class="firstAm highAm">
+        <div id="scndAm">
+        DlikeDavid's <br> Gaming <br> Place
+        </div></div>
+    </div>
+
+    <div id="changelog" class="absolute">
+        <h1 class="absolute part1">CHANGELOG</h1><br><br><br><br><br>
+        <h4 class="absolute part1" onclick="changelogHide()">X</h4>
+        <div class="alot2">
+        <h2 class="part2">v 0.6.2</h2>
+        <h3>Main site:</h3>
+        <p>Added loading screen</p>
+        <p>Fixed delay on pressing buttons</p>
+        <h3>Games:</h3>
+        <p>Minor bug fixes</p>
+        <p>Fixed memory</p>
+        <p>Fixed lines in tic tac toe</p>
+        <!-- B R E A K-->
+        <h2 class="part2">v 0.5.5</h2>
+        <h3>Main site:</h3>
+        <p>Updated minigame showcases imagines</p>
+        <h3>Games:</h3>
+        <p>Added return to menu button in all minigames</p>
+        <p>Added settings button to each minigame (not all yet have settings)</p>
+        <p>Added settings to pwong</p>
+        <p>Added winscreen to memory</p>
+        <p>Added imagines to memory</p>
+        <!-- BREAK -->
+        <h2 class="part2">v 0.4.7</h2>
+        <h3>Main site:</h3>
+        <p>Changed changelog font to <a href="https://fonts.google.com/specimen/Poppins?query=poppins" target="_blank">poppins</a></p>
+        <p>Changed main site font to <a href="https://fonts.google.com/specimen/Rubik?query=Rubik" target="_blank">Rubiks</a></p>
+        <p>Animated changelog</p>
+        <p>Deleted potato mode (not like it was working)</p>
+        <p>Fixed menu (selecting two or more options while animation was going made
+            two or more menus pop up)
+        </p>
+        <p>Fixed changelog not working after changing language</p>
+        <p>Changed selected game animation</p>
+        <h3>Games:</h3>
+        <p>Added reset button to tic tac toe</p>
+        <p>Fixed positions of lines in tic tac Toe</p>
+        <p>Added old pwong in the extras section</p>
+        <!-- BREAK  -->
+        <h2 class="part2">v 0.3.4</h2>
+        <h3>Main site:</h3>
+        <p>Styled scrollbars</p>
+        <p>changed name to DlikeDavid's gamig place (previously DlikeDavid's retro place)</p>
+        <p>Added changelog section</p>
+        <p>Added games preview (image on the left when hovering on game name)</p>
+        <h3>Games:</h3>
+        <p>Tic tac toe beta released</p>
+        <p>Pwong deleted (needs fixing)</p>
+        <p>Added memory (breaks on fast inputs - will fix :] )</p>
+        <p>Added rock paper scissors (maybe will be updated)</p>
+        <h2 class="part2">v 0.2.6</h2>
+        <!-- BREAK  -->
+        <h3>Main site:</h3>
+        <p>Added polish language in the settings</p>
+        <p>Added animations</p>
+        <p>Added animated title on the right</p> 
+        <p>Added placeholders for other games</p>
+        <h3>Games:</h3>
+        <p>Added pwong (a bit broken but mainly working)</p>
+        </div>
+    </div>
+
+</body>
+</html>

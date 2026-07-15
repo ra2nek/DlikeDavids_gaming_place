@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../../base.css">
+    <script src="js.js" defer></script>
+    <script src="../../basics.js" defer></script>
+</head>
+<body class="center">
+    <div id="white-screen" class="absolute center">Loading<span id="dots"></span></div>
+    <div class="game">
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+    </div>
+    <div id="timer">time: <span id="time"><span id="minutes">0</span>:<span id="seconds">00</span></span></div>
+    <div class="arrow"><a href="../../index.html"><img src="../../img/arrow.png" alt="GO BACK" draggable="false"></a></div>
+    <div id="gameOptions" class="absolute spaceEvenly column closed">
+        <p>Nothing here yet :[</p>
+    </div>
+    <img src="../../img/cogwheel.png" alt="options" id="cogwheel" class="absolute" onclick="toggleOptions()" draggable="false">
+    <div id="winscreen" class="absolute">
+        <div id="wintext" class="absolute">You win</div>
+        <h1 class="absolute">Your time: <span id="finalTime"></span></h1>
+        <button class="btn absolute" onclick="restart()">PLAY AGAIN</button>
+    </div>
+</body>
+</html>

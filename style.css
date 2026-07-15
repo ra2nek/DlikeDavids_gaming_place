@@ -1,0 +1,356 @@
+@font-face {
+	font-family: Poppins;
+	src: url(Fonts/Poppins/Poppins-Light.ttf);
+}
+
+@font-face {
+    font-family: Rubik;
+    src: url(Fonts/Rubik/Rubik-VariableFont_wght.ttf);
+}
+
+.extra{
+    position: absolute;
+    margin-top: 5%;
+    margin-left: 5%;
+    top: 0;
+    left: 0;
+    transform: translateX(100%);
+    visibility: hidden;
+}
+
+.options, #sideScreen{
+    margin-top: 5%;
+    margin-left: 5%;
+    color: white;
+    font-size: 14vmin;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 700;
+    width: 40%;
+}
+
+:root{
+    --opac: 1 ;
+}
+
+.mm{
+    font-size: 10vmin;
+}
+
+.option{
+    opacity: .8;
+    transition: .3s ease;
+}
+
+.options:hover > .option{
+    opacity: .5;
+}
+
+.options:hover > .option:hover{
+    opacity: var(--opac);
+}
+
+.curr{
+    opacity: var(--opac);
+}
+
+@keyframes toLeft{
+    0%{
+        transform: translateX(0%);
+    }
+    100%{
+        transform: translateX(-100%);
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+
+
+@keyframes menuForward{
+    0%{
+        transform: translateX(100%);
+        opacity: 0;
+        visibility: visible;
+    }
+    100%{
+        transform: translateX(0%);
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+@keyframes extrasGo{
+    0%{
+        transform: translateX(0%);
+        opacity: 1;
+        visibility: visible;
+    }
+    100%{
+        transform: translateX(100%);
+        opacity: 0;
+        visibility: hidden;
+    }
+    
+}
+
+@keyframes menuBack{
+    0%{
+        transform: translateX(-100%);
+    }
+    100%{
+        transform: translateX(0%);
+        visibility: visible;
+    }
+}
+
+select{
+    background-color: rgba(0,0,0,0);
+    border: white solid 3px;
+    color: white;
+    font-size: 14vmin;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+option{
+    background-color: rgb(0, 0, 0);
+    color: black;
+    font-size: 14vmin;
+}
+
+
+@keyframes selected{
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+        transform: scale(150%) translateX(25%);
+        
+    }
+}
+
+#black{
+    position: absolute;
+    background-color: black;
+    height: 100vh;
+    width: 100%;
+    transform: translateY(-100%);
+}
+
+@keyframes transition{
+    100%{
+        transform: translateY(0%);
+    }
+}
+
+/* Side screen */
+
+#sideScreen{
+    position: absolute;
+    right: 5%;
+    top: 0;
+    height: 70vmin;
+    aspect-ratio: 1/1;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    animation: logoPulse .5s infinite;    
+}
+
+#scndAm{
+    animation: logoRotate 1s infinite;
+    font-size: 12vmin;
+}
+
+@keyframes logoPulse{
+    0%{
+        transform: scale(100%);
+    }
+    20%{
+        transform: scale(120%);
+    }
+    100%{
+        transform: scale(100%);
+    }
+    
+}
+
+@keyframes logoRotate{
+    0%{
+        transform: rotate(10deg);
+    }
+    50%{
+        transform: rotate(-10deg);
+    }
+    100%{
+        transform: rotate(10deg);
+    }
+}
+
+.inline{
+    display: inline;
+}
+
+.checkbox{
+    height: 10vmin;
+    aspect-ratio: 1/1;
+    border: white solid;
+    background-color: black;
+}
+
+@keyframes denied {
+    0%{
+        transform: translateX(0);
+    }
+    20%{
+        transform: translateX(5%);
+    }
+    40%{
+        transform: translateX(-5%);
+    }
+    60%{
+        transform: translateX(5%);
+    }
+    80%{
+        transform: translateX(-5%);
+    }
+    100%{
+        transform: translate(0%);
+    }
+}
+
+.alot{
+    overflow-y: scroll;
+    overflow-x: hidden;
+    width: 40vw;
+    height: 50vh;
+}
+
+::-webkit-scrollbar{
+    width: 2vmin;
+}
+
+::-webkit-scrollbar-thumb{
+    background: white;
+    border-radius: 1vmin;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background: #555;
+}
+
+#sideScreen img{
+    width: 80%;
+}
+
+#changelog{
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    -webkit-backdrop-filter: blur(5px) brightness(.3);
+    backdrop-filter: blur(5px) brightness(.3);
+    padding-left: 25%;
+    display: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+#changelog h1{
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 10vmin;
+}
+
+#changelog p{
+    color: #bbb;
+    margin: 1vmin;
+    word-break:keep-all;
+}
+
+#changelog p:before{
+    content: "-  ";
+}
+
+#changelog h3{
+    color: #ccc;
+}
+
+.alot2{
+    height: 70vh;
+    width: 60%;
+    overflow-y: scroll;
+    line-height: 4vmin;
+    margin-top: 5vmin;
+}
+
+.alot3{
+    overflow-y: scroll;
+    
+    height: 70vh;
+}
+
+#changelog h4{
+    font-size: 10vmin;
+    top: 0;
+    right: 10%;
+}
+
+#changelog h4:hover{
+    cursor: pointer;
+}
+
+@keyframes goUp{
+    0%{
+        transform: translateY(100%);
+    }
+    100%{
+        transform: translateY(0%);
+    }
+}
+
+@keyframes goDown{
+    0%{
+        transform: translateY(0%);
+    }
+    100%{
+        transform: translateY(100%);
+    }
+}
+
+/*Dwukrotna wysokość na changelogu aby fajniej było*/
+
+@keyframes fadeUp {
+    0%{
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+
+#changelog h2, #changelog h3, #changelog p{
+    opacity: 0;
+}
+
+#changelog a, .alot3 a{
+    text-decoration: underline;
+}
+
+#changelog a:hover, .alot3 a:hover{
+    cursor: pointer;
+}
+
+@media (width <= 1200px) {
+    #sideScreen{
+        display: none;
+    }
+    .alot{
+        width: 70vw;
+    }
+}

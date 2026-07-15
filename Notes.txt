@@ -1,0 +1,12 @@
+
+Jezeli karta jest odkryta i jest tylko jedna odkryta karta nie rob nic
+jezeli karta jest odkryta i sa dwie karte odkryte schowaj karty
+
+Odkrywanie karty
+
+jezeli sa dwie karty odkryte:
+	czy s¹ to te same karty ?
+	Tak: zostaw Nie: schowaj po 1s lub jak uzytkownik nacisnie na cos
+
+		
+	

@@ -1,0 +1,112 @@
+.game{
+    width: 75vmin;
+    aspect-ratio: 1/1;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(3,1fr);
+    position: relative;
+}
+
+.cell{
+    width: 1fr;
+    aspect-ratio: 1/1;
+    border-left: white 5px solid;
+    border-bottom: white 5px solid;
+    font-size: 10vmin;
+}
+
+.cell:nth-child(1), .cell:nth-child(4), .cell:nth-child(7){
+    /* border-left: rgba(0, 0, 0, 0) 5px solid; */
+    border-left: none;
+}
+
+.cell:nth-child(7), .cell:nth-child(8), .cell:nth-child(9){
+    border-bottom: none;
+}
+
+.line{
+    display: none;
+    width: 80vmin;
+    background-color: white;
+    height: 1vmin;
+    position: absolute;
+    border-radius: 5vmin;
+}
+
+#row1{
+    top: 18%;
+    left: 50%;
+    transform: translateY(-75%);
+    transform: translateX(-50%); 
+}
+
+#row2{
+    top: 42%;
+    left: 50%;
+    transform: translateY(-50%);
+    transform: translateX(-50%);
+}
+
+#row3{
+    top: 68%;
+    left: 50%;
+    transform: translateY(-25%);
+    transform: translateX(-50%); 
+}
+
+#col1{
+    transform: rotate(90deg) translateY(1250%);
+    top: 43%;
+    left: 14%;
+    width: 70vmin;
+}
+
+#col2{
+    transform: rotate(90deg);
+    top: 43%;
+    width: 70vmin;
+
+}
+
+#col3{
+    transform: rotate(90deg) translateY(-1250%);
+    top: 43%;
+    right: 14%;
+    width: 70vmin;
+}
+
+
+#diag1{
+    transform: rotate(45deg);
+    top: 42%;
+    width: 100vmin;
+}
+
+#diag2{
+    transform: rotate(315deg);
+    width: 100vmin;
+    top: 42%;
+}
+
+.btn{
+    margin-top: 3vmin;
+}
+
+#winscreen{
+    width: 100%;
+    height: 100vh;
+    overflow-y: hidden;
+    backdrop-filter: blur(10px) brightness(.3);
+    top: 0;
+    left: 0;
+    font-size: 15vmin;
+    transform: translateY(-100%);
+}
+
+@keyframes goDown{
+    0%{
+        transform: translateY(-100%);
+    }
+    100%{
+        transform: translateY(0%);
+    }
+}

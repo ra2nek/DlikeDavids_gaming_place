@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock paper scissors</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../../base.css">
+    <script src="js.js" defer></script>
+    <script src="../../basics.js" defer></script>
+</head>
+<body>
+    <div id="white-screen" class="absolute center">Loading<span id="dots"></span></div>
+    <div class="arena relative">
+        <div id="cell1" class="absolute"><img src="img/rock.png" alt="RYNKA" id="player" class="large test"></div>
+        <div id="cell2" class="absolute"><img src="img/rock.png" alt="RYNKA" id="computer" class="large test"></div>
+        <div id="outcome" class="absolute"></div>
+    </div>
+
+    <div class="selection center absolute">
+    <div class="selection-screen ">
+        <div class="title center">Choose</div>
+        <div class="selection-selection spaceEvenly">
+            <div class="opcja center" onclick="Attack(0)"><img src="img/rock.png" alt="kamień"></div>
+            <div class="opcja center" onclick="Attack(1)"><img src="img/paper.png" alt="papier"></div>
+            <div class="opcja center" onclick="Attack(2)"><img src="img/scissors.png" alt="nożyczki"></div>
+        </div>
+    </div>
+    </div>
+    <div class="arrow"><a href="../../index.html"><img src="../../img/arrow.png" alt="GO BACK"></a></div>
+    <div id="gameOptions" class="absolute spaceEvenly column closed">
+        <p>Nothing here yet :[</p>
+    </div>
+    <img src="../../img/cogwheel.png" alt="options" id="cogwheel" class="absolute" onclick="toggleOptions()" draggable="false">
+
+</body>
+</html>

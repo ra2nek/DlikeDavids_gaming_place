@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../base.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<script src="js.js" defer></script>
+<body onresize="resize()" onload="countdown()">
+    <!-- Loading screen broke :/ -->
+    <!-- <div id="white-screen" class="absolute center">Loading<span id="dots"></span></div> -->
+    <div id="playarea">
+        <div class="pallet" id="p1"></div>
+        <div class="pallet" id="p2"></div>
+        <div id="ball"></div>
+        <div id="middleline"></div>
+        <div class="score" id="pointsp1">0</div>
+        <div class="score" id="pointsp2">0</div>
+        <div id="countdown">3</div>
+    </div>
+    <div class="arrow"><a href="../../index.html"><img src="../../img/arrow.png" alt="GO BACK"></a></div>
+    <div id="gameOptions" class="absolute spaceEvenly column closed">
+        <p>Nothing here yet :[</p>
+    </div>
+    <img src="../../img/cogwheel.png" alt="options" id="cogwheel" class="absolute" onclick="toggleOptions()" draggable="false">
+</body>
+</html>

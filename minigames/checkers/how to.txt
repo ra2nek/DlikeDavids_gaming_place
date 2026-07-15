@@ -1,0 +1,5 @@
+Every pawn has it own id
+the position is saved somewhere (Array?)
+We check the position if is good
+We make new pawn and make it same id as removed
+Remove old pawn
