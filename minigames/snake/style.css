@@ -45,8 +45,6 @@ body{
     background-image: url("img/head.png");
     background-size: cover;
     /* background-color: cyan; */
-    border-top-left-radius: .5rem;
-    border-top-right-radius: .5rem;
 }
 
 .snakeTail{
@@ -55,14 +53,11 @@ body{
     background-image: url("img/tail.png");
     /* background-color: green; */
     background-size: cover;
-    border-bottom-left-radius: 1rem;
-    border-bottom-right-radius: 1rem;
 }
 
 .apple{
-    background-color: white;
-    width: 60%;
-    border-radius: 50%;
+    background-image: url("img/apple.png");
+    background-size: cover;
 }
 
 #game-over{
