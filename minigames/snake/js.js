@@ -80,14 +80,15 @@ var gameLogic = () => {
     };
     // console.log(snake)
     if(checkHitboxes()){
+        headDirection(1);
         clearInterval(game);
         console.log("gameOver", score);
         GOScreen.classList.remove("hidden");
         return;
     };
-    drawSnake()
+    headDirection();
+    drawSnake();
 
-    
 
 }
 
@@ -95,9 +96,9 @@ var game = setInterval(gameLogic, "300");
 
 // Drawing snake
 
-function drawSnake(){
-    let head = cells[snake[0]];
-    let prevHead = cells[snake[1]];
+function drawSnake(headID = 0){
+    let head = cells[snake[headID]];
+    let prevHead = cells[snake[headID + 1]];
     let prevTail = cells[snake.pop()];
     let tail = cells[snake[snake.length - 1]];
 
@@ -107,6 +108,9 @@ function drawSnake(){
     tail.classList.remove("snakeBody");
     tail.classList.add("snakeTail");
     prevTail.classList.remove("snakeTail");
+    prevTail.classList.remove("left");
+    prevTail.classList.remove("right");
+    prevTail.classList.remove("down");
 }
 
 // Generate apple
@@ -141,6 +145,27 @@ function checkHitboxes(){
     if(pickedApple) pickedApple = false;
 }
 
+// Head Direction
+
+function headDirection(){
+    let head = cells[snake[0]];
+
+    // head.classList.remove("left");
+    // head.classList.remove("right");
+    // head.classList.remove("down");
+    switch (direction){
+        case "left":
+            head.classList.add("left");
+            break;
+        case "right":
+            head.classList.add("right");
+            break;
+        case "down":
+            head.classList.add("down");
+            break;
+    }
+}
+
 // Setting events for movement
 document.addEventListener("keydown", (event) => {
     if(event.key == "w" || event.key == "ArrowUp"){
@@ -152,7 +177,6 @@ document.addEventListener("keydown", (event) => {
     } else if (event.key == "a" || event.key == "ArrowLeft"){
         direction = "left";
     }
-
     // console.log(direction)
 })
 

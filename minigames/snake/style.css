@@ -42,7 +42,9 @@ body{
 .snakeHead{
     width: 70%;
     aspect-ratio: 1/1;
-    background-color: cyan;
+    background-image: url("img/head.png");
+    background-size: cover;
+    /* background-color: cyan; */
     border-top-left-radius: .5rem;
     border-top-right-radius: .5rem;
 }
@@ -50,7 +52,9 @@ body{
 .snakeTail{
     width: 70%;
     aspect-ratio: 1/1;
-    background-color: green;
+    background-image: url("img/tail.png");
+    /* background-color: green; */
+    background-size: cover;
     border-bottom-left-radius: 1rem;
     border-bottom-right-radius: 1rem;
 }
@@ -82,4 +86,16 @@ body{
 
 #game-over.hidden{
     top: -100%;
+}
+
+.left{
+    transform: rotate(-90deg);
+}
+
+.right{
+    transform: rotate(90deg);
+}
+
+.down{
+    transform: rotate(180deg);
 }
