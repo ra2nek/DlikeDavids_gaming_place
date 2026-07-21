@@ -107,7 +107,7 @@ function toGame(option){
     //okay fine
     //it still needs to be better
     //I think it is fine
-    if(option > 3){
+    if(option > 4){
         games[option].style.setProperty("animation", "denied 1s ease forwards");
         setTimeout(() => {
             games[option].style.setProperty("animation", "none");
@@ -130,6 +130,9 @@ function toGame(option){
             break;
         case 3:
             window.location.href = "minigames/memory/memory.html"
+            break;
+        case 4:
+            window.location.href = "minigames/snake/index.html"
             break;
         }
         
@@ -154,6 +157,9 @@ function minigameShowcase(what){
             break;
         case 3:
             sideScreen.innerHTML = `<img src="img/memory.png">`
+            break;
+        case 4:
+            sideScreen.innerHTML = `<img src="img/Snake logo.png">`
             break;
         default:
             sideScreen.innerHTML = `<div class="firstAm highAm">

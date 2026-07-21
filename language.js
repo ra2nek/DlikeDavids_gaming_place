@@ -19,6 +19,7 @@ function language(){
             Fm[1].innerHTML = "Tic tac toe"
             Fm[2].innerHTML = "Rock paper scissors"
             Fm[3].innerHTML = "Memory"
+            Fm[4].innerHTML = "Snake"
             Sm[0]. innerHTML = 'Language'
             Tm[0].innerHTML = 'Created by: DlikeDavid'
             log("Lang set english")
@@ -90,6 +91,7 @@ function language(){
             Fm[1].innerHTML = "Kółko i krzyżyk"
             Fm[2].innerHTML = "Kamień papier nożyce"
             Fm[3].innerHTML = "Pamieć"
+            Fm[4].innerHTML = "Wąż"
             Sm[0]. innerHTML = 'Jezyk'
             Tm[0].innerHTML = 'Stworzone przez: DlikeDavid'
             log("Lang set Polish")
