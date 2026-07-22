@@ -25,6 +25,10 @@ function language(){
             log("Lang set english")
             document.getElementsByClassName("alot2")[0].innerHTML =
             `
+            <h2 class="part2">v 0.7.1</h2>
+            <h3>Games: </h3>
+            <p>Added snake (yep that's it)</p>
+            <!-- B R E A K -->
             <h2 class="part2">v 0.6.2</h2>
             <h3>Main site:</h3>
             <p>Added loading screen</p>
@@ -97,6 +101,10 @@ function language(){
             log("Lang set Polish")
             document.getElementsByClassName("alot2")[0].innerHTML =
             `
+            <h2 class="part2">v 0.7.1</h2>
+            <h3>Gry: </h3>
+            <p>Dodano węża (yep to wszystko)</p>
+            <!-- B R E A K -->
             <h2 class="part2">v 0.6.2</h2>
             <h3>Strona główna:</h3>
             <p>Dodano ekran ładowania</p>
