@@ -156,7 +156,7 @@ function minigameShowcase(what){
             sideScreen.innerHTML = `<img src="img/Rock paper scissors.png">`
             break;
         case 3:
-            sideScreen.innerHTML = `<img src="img/memory.png">`
+            sideScreen.innerHTML = `<img src="img/Memory.png">`
             break;
         case 4:
             sideScreen.innerHTML = `<img src="img/Snake logo.png">`
